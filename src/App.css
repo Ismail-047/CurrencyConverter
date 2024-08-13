@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "League Spartan", sans-serif;
+}
+
+.mainContainer {
+   display: flex;
+   min-width: 100vw;
+   min-height: 100vh;
+   align-items: center;
+   justify-content: center;
+   background-color: white;
+}
+
+.cardContainer {
+   display: flex;
+   min-width: 65%;
+   min-height: 70vh;
+   border-radius: 5px;
+   position: relative;
+   padding: 30px 50px;
+   align-items: center;
+   flex-direction: column;
+   background-color: white;
+   justify-content: space-around;
+   box-shadow: 0 0 20px rgba(59, 173, 253, .4);
+}
+
+.cardContainer h1 {
+   background: linear-gradient(to right, #97cbf0, #f38280);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
+
+#swap {
+   top: 50%;
+   left: 50%;
+   outline: none;
+   cursor: pointer;
+   border-radius: 50%;
+   padding: 10px 11px;
+   position: absolute;
+   border: 1px solid lightgrey;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-50%, -50%);
+   box-shadow: 0 0 10px rgba(59, 173, 253, .4);
+   background: linear-gradient(to right, #97cbf0, #f38280);
+}
+
+#swap:hover {
+   transform: translate(-50%, -50%) rotate(180deg);
+}
+
+#swapIcon {
+   color: white;
+   font-size: 40px !important;
+}
+
+#convertBtn {
+   border: none;
+   outline: none;
+   color: white;
+   cursor: pointer;
+   font-size: 17px;
+   font-weight: 600;
+   border-radius: 5px;
+   padding: 10px 20px;
+   transition: background-image 0.3s ease-in-out;
+   background-image: linear-gradient(to right, #97cbf0, #f38280);
+}
+
+#convertBtn:hover {
+   background-image: linear-gradient(to left, #97cbf0, #f38280);
+}
+
+@media only screen and (max-width: 767px) {
+   .cardContainer {
+      padding: 25px;
+      max-width: 90%;
+      min-height: 70vh;
+   }
+
+   #swap {
+      padding: 6px 7px;
+   }
+
+   .cardContainer h1 {
+      font-size: 30px;
+   }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+   .cardContainer {
+      min-width: 85%;
+      min-height: 40vh;
+   }
+}
