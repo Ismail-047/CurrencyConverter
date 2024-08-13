@@ -1,0 +1,79 @@
+.card {
+   display: flex;
+   padding: 25px;
+   min-width: 75%;
+   border-radius: 10px;
+   align-items: center;
+   flex-direction: row-reverse;
+   border: 1px solid lightgray;
+   justify-content: space-between;
+}
+
+.leftCard {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.rightCard {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.inputs {
+   border: none;
+   outline: none;
+   width: 170px;
+   font-size: 17px;
+   margin-top: 13px;
+   padding: 7px 10px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(59, 173, 253, .4);
+}
+
+.selects {
+   width: 90px;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   font-size: 17px;
+   margin-top: 13px;
+   padding: 7px 5px;
+   border-radius: 5px;
+   box-shadow: 0 0 10px rgba(255, 85, 83, .4);
+}
+
+@media only screen and (max-width: 767px) {
+   .card {
+      padding: 15px;
+      flex-direction: column;
+      align-items: self-start;
+   }
+
+   .leftCard,
+   .rightCard {
+      width: 100%;
+      margin: 7px 0px;
+      padding: 0px 7px;
+      flex-direction: row;
+      justify-content: space-around;
+   }
+
+   .inputs {
+      width: 130px;
+      font-size: 14px;
+      padding: 4px 10px;
+      margin: 0px 0px 0px 15px;
+   }
+
+   .selects {
+      width: 70px;
+      margin: 0px;
+      font-size: 14px;
+      padding: 4px 5px;
+   }
+
+}
