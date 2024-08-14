@@ -24,6 +24,15 @@ function App() {
       setConvertedAmount((amountToConvert * currenciesInfo[convertTo]).toFixed(2));
    }
 
+   const handleAmountChange = (event) => {
+      const inputValue = event.target.value;
+      if (!inputValue || inputValue.startsWith('0.') || inputValue === '0') {
+         setAmountToConvert(inputValue);
+      } else {
+         setAmountToConvert(Number(inputValue));
+      }
+   };
+
    return (
       <>
          <main className="mainContainer">
@@ -39,7 +48,7 @@ function App() {
                   label="Amount To Convert"
                   currencyOptions={currencyOptions}
                   onCurrencyChange={(event) => setConvertFrom(event.target.value)}
-                  onAmountChange={(event) => setAmountToConvert(Number(event.target.value))}
+                  onAmountChange={handleAmountChange}
                />
 
                <button

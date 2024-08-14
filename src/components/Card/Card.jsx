@@ -5,7 +5,6 @@ function Card({
    value,
    amount,
    label,
-   required,
    readOnly,
    onAmountChange,
    onCurrencyChange,
@@ -54,6 +53,7 @@ function Card({
             </label>
 
             <input
+               min={0}
                type="number"
                value={amount}
                id={uniqueId1}
